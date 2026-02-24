@@ -3,8 +3,8 @@ import time
 import os
 
 # Gegevens
-url = os.environ.get("SUPABASE_URL_mp1")
-key = os.environ.get("SUPABASE_KEY_mp2")
+url = os.environ.get("SUPABASE_URL_MP1")
+key = os.environ.get("SUPABASE_KEY_MP2")
 supabase: Client = create_client(url, key)
 
 def voer_actie_uit():
