@@ -1,4 +1,4 @@
-name: Dagelijkse Stock Check
+name: weekelijkse update mp1
 
 on:
   schedule:
