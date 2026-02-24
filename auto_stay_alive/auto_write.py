@@ -1,5 +1,6 @@
 from supabase import create_client, Client
 import time
+import os
 
 # Gegevens
 url = os.environ.get("SUPABASE_URL")
