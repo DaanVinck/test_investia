@@ -2,8 +2,7 @@ from supabase import create_client, Client
 import time
 
 # Gegevens
-url = "https://gtgroekzpwrrfvarvgad.supabase.co"
-key = "sb_publishable_abIBGoMTWeTWbHlYer7srg_iCbsQMSN"
+url = 
 supabase: Client = create_client(url, key)
 
 def voer_actie_uit():
