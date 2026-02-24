@@ -27,4 +27,4 @@ jobs:
         env:
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
           SUPABASE_KEY: ${{ secrets.SUPABASE_KEY }}
-        run: auto_stay_alive/auto_write.py # Pas de naam aan naar jouw bestand!
+        run: python auto_stay_alive/auto_write.py # Pas de naam aan naar jouw bestand!
