@@ -2,7 +2,8 @@ from supabase import create_client, Client
 import time
 
 # Gegevens
-url = 
+url = os.environ.get("SUPABASE_URL")
+key = os.environ.get("SUPABASE_KEY")
 supabase: Client = create_client(url, key)
 
 def voer_actie_uit():
