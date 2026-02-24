@@ -26,5 +26,5 @@ jobs:
       - name: Het script uitvoeren
         env:
           SUPABASE_URL: ${{ secrets.SUPABASE_URL_MP1 }}
-          SUPABASE_KEY: ${{ secrets.SUPABASE_KEY_MP2 }}
+          SUPABASE_KEY: ${{ secrets.SUPABASE_KEY_MP1 }}
         run: python auto_stay_alive/auto_write_mp1.py # Pas de naam aan naar jouw bestand!
