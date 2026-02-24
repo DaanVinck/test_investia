@@ -1,0 +1,30 @@
+name: Dagelijkse Stock Check
+
+on:
+  schedule:
+    # Dit draait elke dag om 00:00 UTC
+    # Formaat: 'minuut uur dag maand weekdag'
+    - cron: '0 3 * * 1'
+  workflow_dispatch: # Hiermee kun je het script ook handmatig starten via de GitHub website
+
+jobs:
+  run-script:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Code uitchecken
+        uses: actions/checkout@v3
+
+      - name: Python instellen
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+
+      - name: Bibliotheken installeren
+        run: |
+          pip install supabase
+
+      - name: Het script uitvoeren
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_KEY: ${{ secrets.SUPABASE_KEY }}
+        run: python auto_stay_alive/auto_write_mp1.py # Pas de naam aan naar jouw bestand!
