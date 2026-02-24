@@ -11,7 +11,7 @@ def voer_actie_uit():
     try:
         # 1. TOEVOEGEN
         nieuw_item = {
-            "stock_name": "TEST",
+            "ticker": "TEST",
             "ticker": "0"
         }
         insert_res = supabase.table("stock_performance").insert(nieuw_item).execute()
